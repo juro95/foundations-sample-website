@@ -5,6 +5,14 @@
 # raise and handle an error that helps both you as a developer,
 # for example by logging the request and error, and the user,
 # letting them know that their color doesn't exist.
+import json
+
+
+with open('color_check/data/css-color-names.json') as f:
+    color_code = json.load(f)
+
+print(color_code)
+
 
 def get_color_code(color_name):
     # this is where you should add your logic to check the color.
