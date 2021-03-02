@@ -1,7 +1,7 @@
 from flask import Flask
 from flask import render_template
-from flask import request, redirect
-from color_check.controllers.get_color_code import get_color_code
+from flask import request
+from controllers.get_color_code import get_color_code
 
 app = Flask(__name__)
 
@@ -22,13 +22,14 @@ def show_color():
     # - render a new page which shows a square of that color and its name
     # - if the color doesn't exist, give the user a useful error message.
     # - create a log.txt file which records (logs) the user requests.
-
-    user_submitted_string = 'blue'
+    user_submitted_string = request.form["color"]
+    print("the submitted color is" + " " + user_submitted_string)
     color_hex_code = get_color_code(user_submitted_string)
-
     return render_template('color.html', page_title="Show Color",
                            color_hex_code=color_hex_code)
 
 
 if __name__ == "__main__":
     app.run(host="localhost", port=8080, debug=True)
+
+show_color()
