@@ -1,26 +1,37 @@
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-left: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 2rem;
+}
+
+.parent_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .banner {
-    margin-top: 10rem;
-    color: black;
-    margin-bottom: 1rem;
-    text-align: center;
-
+  margin-top: 10rem;
+  color: black;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-.color{text-align: center;}
+.color {
+  text-align: center;
+}
 
-.instruction {text-align: center;}
+.instruction {
+  text-align: center;
+}
 
 .color_box {
-    width: 200px;
-    height: 200px;
+  border-radius: 20%;
+  width: 200px;
+  height: 200px;
 }
 
 footer {
-    margin-top: 5rem;
-    text-align: center;
+  margin-top: 5rem;
+  text-align: center;
 }
