@@ -3,6 +3,13 @@ from flask import render_template
 from flask import request  # , redirect
 from controllers.get_color_code import get_color_code
 
+import json
+
+
+with open('color_check/data/css-color-names.json') as f:
+    color_code = json.load(f)
+
+
 app = Flask(__name__)
 
 
@@ -23,11 +30,14 @@ def show_color():
     # - if the color doesn't exist, give the user a useful error message.
     # - create a log.txt file which records (logs) the user requests.
     user_submitted_string = request.form["color"]
-    print("the submitted color is" + " " + user_submitted_string)
     color_hex_code = get_color_code(user_submitted_string)
 
-    return render_template('color.html', page_title="Show Color",
-                           color_hex_code=color_hex_code)
+    if user_submitted_string in color_code:
+        return render_template('color.html', page_title="Show Color",
+                               color_hex_code=color_hex_code)
+    else:
+        return render_template('error.html', page_title="Show Color",
+                               user_submitted_string=user_submitted_string)
 
 
 if __name__ == "__main__":
