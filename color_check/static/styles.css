@@ -4,9 +4,20 @@ body {
 }
 
 .banner {
-    margin-top: 2rem;
+    margin-top: 10rem;
     color: black;
     margin-bottom: 1rem;
+    text-align: center;
+
+}
+
+.color{text-align: center;}
+
+.instruction {text-align: center;}
+
+.color_box {
+    width: 200px;
+    height: 200px;
 }
 
 footer {
