@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import render_template
-from flask import request
+from flask import request  # , redirect
 from controllers.get_color_code import get_color_code
 
 app = Flask(__name__)
@@ -25,6 +25,7 @@ def show_color():
     user_submitted_string = request.form["color"]
     print("the submitted color is" + " " + user_submitted_string)
     color_hex_code = get_color_code(user_submitted_string)
+
     return render_template('color.html', page_title="Show Color",
                            color_hex_code=color_hex_code)
 
