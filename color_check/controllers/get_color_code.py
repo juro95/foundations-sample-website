@@ -22,6 +22,6 @@ def get_color_code(user_submitted_string):
         if key == user_submitted_string:
             print(color_code[user_submitted_string])
 
-    hex_code = '#0000ff'
+    hex_code = color_code[user_submitted_string]
 
     return hex_code
