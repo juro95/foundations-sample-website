@@ -2,9 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request  # , redirect
 from controllers.get_color_code import get_color_code
-
 import json
-
+import logging
 
 with open('color_check/data/css-color-names.json') as f:
     color_code = json.load(f)
@@ -32,6 +31,13 @@ def show_color():
     user_submitted_string = request.form["color"]
     color_hex_code = get_color_code(user_submitted_string)
 
+    logging.basicConfig(filename='color_check/color_check.log', filemode='w',
+                        format='%(asctime)s - %(levelname)s - %(message)s',
+                        level=logging.DEBUG)
+
+    logging.debug(user_submitted_string)
+
+    # returning page with color code or error message
     if user_submitted_string in color_code:
         return render_template('color.html', page_title="Show Color",
                                color_hex_code=color_hex_code)
