@@ -1,0 +1,7 @@
+werkzeug - INFO - 127.0.0.1 - - [06/Mar/2021 15:03:37] "[35m[1mPOST /color HTTP/1.1[0m" 500 -
+werkzeug - INFO - 127.0.0.1 - - [06/Mar/2021 15:03:37] "[37mGET /color?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [06/Mar/2021 15:03:37] "[37mGET /color?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [06/Mar/2021 15:03:37] "[37mGET /color?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [06/Mar/2021 15:03:37] "[37mGET /color?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+werkzeug - INFO - 127.0.0.1 - - [06/Mar/2021 15:03:37] "[37mGET /color?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+werkzeug - INFO -  * Detected change in '/Users/julianromer/Desktop/foundations-sample-website/color_check/website.py', reloading
